@@ -6,11 +6,48 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.androidbbmemoapp.MainActivity" >
+    tools:context="com.example.aaa.MainActivity" >
 
-    <TextView
+    <EditText
+        android:id="@+id/idText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/pwdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pwdText"
+        android:layout_centerVertical="true"
+        android:onClick="loginBtnClicked"
+        android:text="로그인" />
+
+    <Button
+        android:id="@+id/onButton1Clicked"
+        android:onClick="onButton1Clicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/loginBtn"
+        android:layout_alignBottom="@+id/loginBtn"
+        android:layout_alignRight="@+id/idText"
+        android:text="비회원 " />
 
 </RelativeLayout>
+
